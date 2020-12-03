@@ -10,6 +10,7 @@ import (
 	Collection of helper functions
 */
 
+// Reads in a file as a slice of strings
 func FileOfStrings(fp string) ([]string, error) {
 	fileBytes, err := ioutil.ReadFile(fp)
 	if err != nil {
@@ -19,6 +20,7 @@ func FileOfStrings(fp string) ([]string, error) {
 	return sliceData, nil
 }
 
+// Reads in the given file as a slice of integers
 func FileOfInts(fp string) ([]int, error) {
 	ss, err := FileOfStrings(fp)
 	if err != nil {
