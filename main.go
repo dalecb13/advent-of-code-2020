@@ -86,7 +86,7 @@ func main() {
 			log.Fatalln("Error reading file", err)
 		}
 		// Calculate solution
-		numTrees, err := d3.D3p1(slopeMap)
+		numTrees, err := d3.D3p1simple(slopeMap, 1, 3)
 		if err != nil {
 			log.Fatalln("Error running d3p1 problem ", err)
 		} else {
