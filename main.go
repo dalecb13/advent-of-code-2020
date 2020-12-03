@@ -8,11 +8,13 @@ import (
 
 	"github.com/dalecb13/aoc2020/d1"
 	"github.com/dalecb13/aoc2020/d2"
+	"github.com/dalecb13/aoc2020/d3"
 	"github.com/dalecb13/aoc2020/helpers"
 )
 
 var d1File = "data/day1.txt"
 var d2File = "data/day2.txt"
+var d3File = "data/day3.txt"
 
 func main() {
 	log.Println("The CLI for testing solutions to the Advent of Code 2020!")
@@ -77,5 +79,18 @@ func main() {
 			log.Fatalln("Error parsing passwords", err)
 		}
 		log.Println("D2P2 result: ", strconv.Itoa(numValidPasswords))
+	case "d3p1":
+		// Parse file input
+		slopeMap, err := helpers.FileOfStrings(d3File)
+		if err != nil {
+			log.Fatalln("Error reading file", err)
+		}
+		// Calculate solution
+		numTrees, err := d3.D3p1(slopeMap)
+		if err != nil {
+			log.Fatalln("Error running d3p1 problem ", err)
+		} else {
+			log.Println(strconv.Itoa(numTrees))
+		}
 	}
 }
