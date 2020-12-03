@@ -5,6 +5,9 @@ import (
 	"log"
 	"os"
 	"strconv"
+
+	"github.com/dalecb13/aoc2020/d1"
+	"github.com/dalecb13/aoc2020/helpers"
 )
 
 var d1File = "data/day1.txt"
@@ -22,14 +25,25 @@ func main() {
 	switch problem {
 	case "d1p1":
 		fmt.Println("Day 1, Problem 1")
-		i, j, err := D1p1(d1File)
+
+		// Parse file input
+		expenseReport, err := helpers.FileOfInts(d1File)
+		if err != nil {
+			log.Fatalln("Issue reading file", err)
+		}
+		i, j, err := d1.D1p1(expenseReport)
 		if err != nil {
 			log.Fatalln("No pair found")
 		}
 		log.Println("D1P1 result: ", strconv.Itoa(i*j))
 	case "d1p2":
 		fmt.Println("Day 1, Problem 2")
-		one, two, three, e := D1p2(d1File)
+		// Parse file input
+		expenseReport, err := helpers.FileOfInts(d1File)
+		if err != nil {
+			log.Fatalln("Issue reading file", err)
+		}
+		one, two, three, e := d1.D1p2(expenseReport)
 		if e != nil {
 			log.Fatalln("No trio found")
 		}
