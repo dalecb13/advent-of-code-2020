@@ -64,5 +64,18 @@ func main() {
 			log.Fatalln("Error parsing passwords", err)
 		}
 		log.Println("D2P1 result: ", strconv.Itoa(numValidPasswords))
+	case "d2p2":
+		log.Println("Day 2, Problem 2")
+		// Parse file input
+		passwords, err := helpers.FileOfStrings(d2File)
+		if err != nil {
+			log.Fatalln("Error reading file", err)
+		}
+		// Calculate solution
+		numValidPasswords, err := d2.ValidateDay2Passwords(passwords)
+		if err != nil {
+			log.Fatalln("Error parsing passwords", err)
+		}
+		log.Println("D2P2 result: ", strconv.Itoa(numValidPasswords))
 	}
 }
