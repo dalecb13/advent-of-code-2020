@@ -80,6 +80,7 @@ func main() {
 		}
 		log.Println("D2P2 result: ", strconv.Itoa(numValidPasswords))
 	case "d3p1":
+		log.Println("Day 3, Problem 1")
 		// Parse file input
 		slopeMap, err := helpers.FileOfStrings(d3File)
 		if err != nil {
@@ -91,6 +92,20 @@ func main() {
 			log.Fatalln("Error running d3p1 problem ", err)
 		} else {
 			log.Println(strconv.Itoa(numTrees))
+		}
+	case "d3p2":
+		log.Println("Day 3, Problem 2")
+		// Parse file input
+		slopeMap, err := helpers.FileOfStrings(d3File)
+		if err != nil {
+			log.Fatalln("Error reading file", err)
+		}
+		// Calculate solution
+		product, err := d3.D3p2(slopeMap)
+		if err != nil {
+			log.Fatalln("Error running d3p2 problem ", err)
+		} else {
+			log.Println(strconv.Itoa(product))
 		}
 	}
 }
