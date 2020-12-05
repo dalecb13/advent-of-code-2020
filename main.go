@@ -9,6 +9,7 @@ import (
 	"github.com/dalecb13/aoc2020/d1"
 	"github.com/dalecb13/aoc2020/d2"
 	"github.com/dalecb13/aoc2020/d3"
+	"github.com/dalecb13/aoc2020/d4"
 	"github.com/dalecb13/aoc2020/helpers"
 )
 
@@ -107,5 +108,11 @@ func main() {
 		} else {
 			log.Println(strconv.Itoa(product))
 		}
+	case "d4p1":
+		d4.D4p1()
+	case "d4p2":
+		d4.D4p2()
+	default:
+		log.Fatalln("Unknown argument found: ", problem)
 	}
 }
