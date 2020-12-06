@@ -7,9 +7,9 @@ import (
 
 func TestLeadingZeros(t *testing.T) {
 	input := "0011223344"
-	converted := strconv.Itoa(input)
+	converted, err := strconv.Atoi(input)
 
-	if converted != 11223344 {
+	if err != nil || converted != 11223344 {
 		t.Errorf("Conversion error")
 	}
 }
