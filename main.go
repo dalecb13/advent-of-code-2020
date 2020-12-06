@@ -120,6 +120,8 @@ func main() {
 		d5.D5p2()
 	case "d6p1":
 		d6.D6p1()
+	case "d6p2":
+		d6.D6p2()
 	default:
 		log.Fatalln("Unknown argument found: ", problem)
 	}
