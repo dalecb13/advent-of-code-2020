@@ -11,6 +11,7 @@ import (
 	"github.com/dalecb13/aoc2020/d3"
 	"github.com/dalecb13/aoc2020/d4"
 	"github.com/dalecb13/aoc2020/d5"
+	"github.com/dalecb13/aoc2020/d6"
 	"github.com/dalecb13/aoc2020/helpers"
 )
 
@@ -117,6 +118,8 @@ func main() {
 		d5.D5p1()
 	case "d5p2":
 		d5.D5p2()
+	case "d6p1":
+		d6.D6p1()
 	default:
 		log.Fatalln("Unknown argument found: ", problem)
 	}
